@@ -1,3 +1,5 @@
+import random
+
 class Auto:
     def __init__(self, nombre, velocidad_maxima):
         self.__nombre=nombre
@@ -8,7 +10,7 @@ class Auto:
         pass
 
     def mostrar_estado(self):
-        pass
+        return [self.__velocidad_maxima, self.__posicion_actual]
 
     @property
     def nombre(self):
@@ -18,4 +20,8 @@ class Auto:
     def nombre(self, value):
         self.__nombre=value
     
-
+    @property
+    def velocidad_maxima(self):
+        return self.__velocidad_maxima
+    
+    
